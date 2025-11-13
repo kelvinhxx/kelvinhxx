@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinema Moderno e a Influência de Hollywood</title>
+  <style>
+    :root {
+      --bg-color: #0e1117;
+      --text-color: #e8eef4;
+      --accent-color: #6ee7b7;
+      --header-gradient: linear-gradient(90deg, #ff4c4c, #3b82f6);
+      --card-bg: #151a22;
+    }
+
+    body.light-mode {
+      --bg-color: #f9fafb;
+      --text-color: #111827;
+      --accent-color: #2563eb;
+      --header-gradient: linear-gradient(90deg, #fbbf24, #2563eb);
+      --card-bg: #ffffff;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    header {
+      background: var(--header-gradient);
+      padding: 30px 10px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+
+    nav {
+      background-color: var(--card-bg);
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    nav a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+      color: #3b82f6;
+      transform: scale(1.1);
+    }
+
+    #mode-toggle {
+      background: none;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.4s;
+      font-weight: bold;
+    }
+
+    #mode-toggle:hover {
+      background: var(--accent-color);
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      transition: background-color 0.5s;
+    }
+
+    h2 {
+      color: var(--accent-color);
+      margin-top: 40px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+      transition: transform 0.5s;
+    }
+
+    img:hover {
+      transform: scale(1.02);
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .galeria div {
+      background-color: #1f2937;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    body.light-mode .galeria div {
+      background-color: #e5e7eb;
+    }
+
+    .galeria div:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .galeria p {
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+      color: #9ca3af;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #9ca3af;
+      font-size: 14px;
+      transition: color 0.5s;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cinema Moderno e a Influência de Hollywood</h1>
+    <p>Como a tecnologia e o poder cultural moldam a indústria do entretenimento</p>
+  </header>
+
+  <nav>
+    <a href="#origens">Origens</a>
+    <a href="#tecnologia">Tecnologia</a>
+    <a href="#hollywood">Hollywood</a>
+    <a href="#marvel">Marvel</a>
+    <a href="#impacto">Impacto Global</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#conclusao">Conclusão</a>
+    <button id="mode-toggle">🌙 Modo Claro</button>
+  </nav>
+
+  <main>
+    <section id="origens">
+      <h2>O nascimento do cinema moderno</h2>
+      <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=1200&q=80" alt="Câmera de cinema moderna">
+      <p>
+        O cinema moderno nasceu com a combinação da arte, da narrativa e da inovação tecnológica. A partir da década de 1960, diretores começaram a quebrar regras narrativas, explorando temas mais profundos, psicológicos e sociais. 
+      </p>
+      <p>
+        Com o avanço digital, o cinema se libertou das limitações físicas da película. Hoje, câmeras digitais de alta resolução, softwares de edição e efeitos especiais criam produções que desafiam a realidade.
+      </p>
+    </section>
+
+    <section id="tecnologia">
+      <h2>As novas tecnologias no cinema</h2>
+      <img src="https://images.unsplash.com/photo-1581905764498-df9e7197b1d2?auto=format&fit=crop&w=1200&q=80" alt="Efeitos visuais no cinema">
+      <p>
+        O cinema moderno é impulsionado por tecnologias de ponta como <strong>VFX</strong>, <strong>motion capture</strong> e <strong>renderização em tempo real</strong>. Isso permite que cineastas criem universos completos sem sair do estúdio.
+      </p>
+      <p>
+        Inovações como a <strong>realidade virtual</strong> e o <strong>som imersivo</strong> transformaram a experiência do público, aproximando o espectador da ação como nunca antes. Hoje, inteligência artificial também é usada para aprimorar roteiros, restaurar imagens e até recriar vozes.
+      </p>
+    </section>
+
+    <section id="hollywood">
+      <h2>Hollywood: o centro do cinema mundial</h2>
+      <img src="https://images.unsplash.com/photo-1574267432553-4b4628081b1c?auto=format&fit=crop&w=1200&q=80" alt="Hollywood">
+      <p>
+        Hollywood é o epicentro do cinema global, combinando criatividade, marketing e tecnologia. Além de entreter, exporta valores culturais e comportamentais, consolidando o poder da indústria americana no mundo.
+      </p>
+    </section>
+
+    <section id="marvel">
+      <h2>A Marvel Studios e a revolução das franquias</h2>
+      <img src="https://images.unsplash.com/photo-1614644147726-01830dfe1208?auto=format&fit=crop&w=1200&q=80" alt="Cena de super-herói da Marvel">
+      <p>
+        A <strong>Marvel Studios</strong> redefiniu o conceito de franquia cinematográfica. Com o lançamento de <em>Homem de Ferro</em> (2008), iniciou o <strong>Universo Cinematográfico da Marvel (MCU)</strong>, conectando dezenas de filmes em um só universo narrativo.
+      </p>
+      <p>
+        O sucesso de bilheteria e o impacto cultural da Marvel mostraram que a combinação de efeitos visuais, storytelling e representatividade pode transformar filmes em eventos globais.
+      </p>
+    </section>
+
+    <section id="impacto">
+      <h2>O impacto cultural e social</h2>
+      <img src="https://images.unsplash.com/photo-1603190287605-e6ade32fa852?auto=format&fit=crop&w=1200&q=80" alt="Cena de bastidores de gravação de filme">
+      <p>
+        Hollywood e a Marvel influenciam a moda, a música, a política e até a forma como o público se relaciona com a tecnologia. Filmes como <em>Pantera Negra</em> e <em>Capitã Marvel</em> simbolizam a nova era de representatividade e inclusão nas telas.
+      </p>
+    </section>
+
+    <section id="galeria">
+      <h2>Galeria de Filmes da Marvel</h2>
+      <div class="galeria">
+        <div>
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Iron_Man_poster.jpg" alt="Homem de Ferro">
+          <p>Homem de Ferro (2008)</p>
+        </div>
+        <div>
+          <img src="https://upload.wikimedia.org/wikipedia/en/9/95/The_Avengers_2012_poster.jpg" alt="Os Vingadores">
+          <p>Os Vingadores (2012)</p>
+        </div>
+        <div>
+          <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Black_Panther_%28film%29_poster.jpg" alt="Pantera Negra">
+          <p>Pantera Negra (2018)</p>
+        </div>
+        <div>
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/4d/Avengers_Endgame_poster.jpg" alt="Vingadores: Ultimato">
+          <p>Vingadores: Ultimato (2019)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="conclusao">
+      <h2>Conclusão</h2>
+      <p>
+        O cinema moderno reflete o avanço tecnológico e a globalização da cultura. A influência de Hollywood e a inovação da Marvel moldaram uma nova era audiovisual, em que o público é parte da narrativa.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 — Blog Cinema Moderno | Desenvolvido para fins educativos e informativos.</p>
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById("mode-toggle");
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+      const isLight = document.body.classList.contains("light-mode");
+      toggleButton.textContent = isLight ? "🌙 Modo Escuro" : "☀️ Modo Claro";
+    });
+  </script>
+</body>
+</html>
